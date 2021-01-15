@@ -46,7 +46,7 @@ class Model{
     
     
     public function post($params = null){
-
+        $params = ['table' => $this->table] + $params;
         if($params['table'] !== null){
 
             $table = $this->dbPrefix . $params['table'];

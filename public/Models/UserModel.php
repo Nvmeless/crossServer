@@ -12,4 +12,8 @@ function getPage($params = null){
 
         echo $this->username;
     }
+    function createUser($data){
+        echo 'User Créé'; 
+        $this->post($data);
+    }
 }
