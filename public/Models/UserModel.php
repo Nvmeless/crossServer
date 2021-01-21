@@ -3,17 +3,17 @@
 
 class UserModel extends Model{
 
-public $table = 'users';
+    public $table = 'users';
 
-function getPage($params = null){
-    if($params !== null){
-
-        $this->get(['id' => $params['id']]);
-
-        echo $this->username;
+    function getPage($params = null){
+        if($params !== null){
+            $this->get(['id' => $params['id']]);
+        }
+    }
+    function getAll($params = array() ){
+        return $this->find();
     }
     function createUser($data){
-        echo 'User Créé'; 
         $this->post($data);
     }
 }
